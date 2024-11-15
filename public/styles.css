@@ -2,15 +2,75 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     background-color: #f0f2f5;
 }
 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 h1 {
-    color: #1a1a1a;
+    color: #1a1a1b;
     text-align: center;
-    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.search-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #0079d3;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.search-result {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-result:hover {
+    background-color: #f6f7f8;
+}
+
+.error, .no-results {
+    padding: 10px 20px;
+    color: #666;
+    text-align: center;
+}
+
+#selectedSubreddit {
+    text-align: center;
+    color: #0079d3;
+    margin-top: 30px;
+    font-size: 24px;
 }
