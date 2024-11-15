@@ -1,0 +1,26 @@
+{
+  "name": "similarsubreddit",
+  "version": "1.0.0",
+  "description": "Subreddit Explorer is a simple web application built with ExpressJS that allows users to search for and explore subreddits. It fetches data directly from Reddit's API and displays related subreddits based on search criteria.",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.3",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  }
+}
